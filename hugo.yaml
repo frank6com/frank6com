@@ -45,7 +45,7 @@ menu:
       pageRef: '/about/'
       weight: 2
     - identifier: blog
-      name: '博客'
+      name: '文章'
       pageRef: '/blog/'
       weight: 3
     - identifier: tech
@@ -74,6 +74,23 @@ menu:
       params:
         icon: github          # 保留 GitHub 图标
     - identifier: project
-      name: 项目
+      name: '我的项目'
       weight: 9
       pageRef: '/project/'
+    - identifier: tempermonkey
+      name: 'Tampermonkey 脚本'
+      weight: 10
+      pageRef: '/project/tempermonkey/'
+      parent: project
+
+services:
+  disqus:
+    shortname: frank6com
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
