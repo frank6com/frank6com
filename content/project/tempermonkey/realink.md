@@ -3,6 +3,7 @@ date = '2026-02-10T14:55:10+08:00'
 draft = false
 title = 'Realink 真实链接转换'
 tags = ['tempermonkey', '油猴脚本']
+comments = true
 +++
 
 ### 前言
@@ -25,3 +26,8 @@ tags = ['tempermonkey', '油猴脚本']
 - 支持特定网站的链接替换规则
 - 提供一个界面让用户自定义链接替换规则
 - 优化性能，避免对大量链接进行不必要的替换
+
+### 贡献
+
+如果你有兴趣参与这个项目，欢迎在 GitHub 上提交 issue 或 pull request：
+[GitHub 仓库地址](https://github.com/frank6com/realink).
