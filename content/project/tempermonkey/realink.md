@@ -2,13 +2,13 @@
 date = '2026-02-10T14:55:10+08:00'
 draft = false
 title = 'Realink 真实链接转换'
-tags = ['tempermonkey', '油猴脚本']
+tags = ['tempermonkey', '油猴脚本', '开源']
 comments = true
 +++
 
 ### 前言
 
-常常在一些网站上看到连接名称是 `https://www.example.com`，但点击后却跳转到 `https://www.example.com/redirect?url=https%3A%2F%2Fwww.real-link.com` 之类的广告链接，所以我写了这样的一个脚本自动将这些链接替换成原本的真实链接。
+常常在一些网站上看到连接名称是 `https://www.example.com`，但点击后却跳转到 `https://www.example.com/redirect?url=https%3A%2F%2Fwww.real-link.com` 之类的广告链接，所以我写了这样的一个油猴脚本自动将这些链接替换成原本的真实链接。
 
 ### 实现逻辑
 

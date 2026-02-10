@@ -78,10 +78,11 @@ menu:
       weight: 9
       pageRef: '/project/'
     - identifier: tempermonkey
-      name: 'Tampermonkey 脚本'
+      name: '油猴脚本'
       weight: 10
       pageRef: '/project/tempermonkey/'
       parent: project
+
 
 services:
   disqus:
