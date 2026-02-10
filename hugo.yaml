@@ -53,7 +53,7 @@ menu:
       pageRef: '/blog/'
       weight: 3
       params:
-        icon: book            # 新增：图标（可选）
+        icon: book-open            # 新增：图标（可选）
     - identifier: tech
       name: '技术分享'
       pageRef: '/blog/tech/'
@@ -67,14 +67,14 @@ menu:
       weight: 5
       parent: blog
       params:
-        icon: gamepad         # 新增：图标（可选）
+        icon: puzzle         # 新增：图标（可选）
     - identifier: other
       name: '其他'
       pageRef: '/blog/other/'
       weight: 6
       parent: blog
       params:
-        icon: pen-to-square   # 新增：图标（可选）
+        icon: pencil   # 新增：图标（可选）
     - name: 搜索
       weight: 7               # 调整权重，避免和 GitHub 冲突
       params:
