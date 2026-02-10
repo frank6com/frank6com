@@ -1,0 +1,46 @@
+baseURL: 'https://www.frank6.com/'
+languageCode: 'zh-Hans'
+title: 'Frank6 的意识流'
+
+theme: 'hextra'
+
+menu:
+  main:
+    - name: '首页'
+      pageRef: '/'
+      weight: 1
+    - name: '关于'
+      pageRef: '/about/'
+      weight: 2
+    - identifier: blog
+      name: '博客'
+      pageRef: '/blog/'
+      weight: 3
+    - identifier: tech
+      name: '技术分享'
+      pageRef: '/blog/tech/'
+      weight: 4
+      parent: blog
+    - identifier: game
+      name: '游戏相关'
+      pageRef: '/blog/game/'
+      weight: 5
+      parent: blog
+    - identifier: other
+      name: '其他'
+      pageRef: '/blog/other/'
+      weight: 6
+      parent: blog
+    - name: 搜索
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/frank6com"
+      params:
+        icon: github
+    - identifier: project
+      name: 项目
+      weight: 6
+      pageRef: '/project/'
