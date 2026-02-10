@@ -1,46 +1,93 @@
+# 基础核心配置
 baseURL: 'https://www.frank6.com/'
 languageCode: 'zh-Hans'
+defaultContentLanguage: 'zh'  # 新增：指定默认语言，避免多语言目录
 title: 'Frank6 的意识流'
+theme: 'hextra'               # 已正确配置
 
-theme: 'hextra'
+# 构建配置（确保生成所有页面，包括非草稿）
+build:
+  publishDir: 'public'        # 明确指定输出目录（Hugo 默认，但显式配置更稳妥）
+  render:
+    draft: false              # 不渲染草稿页面
+    future: true              # 渲染未来日期的页面
+    expired: false            # 不渲染过期页面
 
+# Hextra 主题核心配置（关键缺失项）
+params:
+  # 站点基础配置
+  title: 'Frank6 的意识流'
+  description: '个人技术博客与生活分享'  # 站点描述（可选，优化 SEO）
+  author: 'Frank6'            # 作者名
+  home: 'home'                # 指定首页对应 content/home/_index.md（核心！）
+  mainSections: ['blog']      # 主内容分区，对应 content/blog 目录
+
+  # 导航栏配置
+  navbar:
+    logo:
+      text: 'Frank6'          # 导航栏 Logo 文字
+    align: 'left'             # 导航栏对齐方式
+    showDarkMode: true        # 显示暗黑模式切换
+    showSearch: true          # 显示搜索框（匹配你的搜索菜单）
+
+  # 页脚配置（可选，完善站点）
+  footer:
+    showCopyright: true
+    copyright: '© 2026 Frank6. All rights reserved.'
+
+# 菜单配置（保留你的结构，修复 Hextra 兼容问题）
 menu:
   main:
     - name: '首页'
-      pageRef: '/'
+      pageRef: '/'            # 对应根目录首页
       weight: 1
+      params:
+        icon: home            # 新增：Hextra 支持的图标（可选）
     - name: '关于'
       pageRef: '/about/'
       weight: 2
+      params:
+        icon: user            # 新增：图标（可选）
     - identifier: blog
       name: '博客'
       pageRef: '/blog/'
       weight: 3
+      params:
+        icon: book            # 新增：图标（可选）
     - identifier: tech
       name: '技术分享'
       pageRef: '/blog/tech/'
       weight: 4
       parent: blog
+      params:
+        icon: code            # 新增：图标（可选）
     - identifier: game
       name: '游戏相关'
       pageRef: '/blog/game/'
       weight: 5
       parent: blog
+      params:
+        icon: gamepad         # 新增：图标（可选）
     - identifier: other
       name: '其他'
       pageRef: '/blog/other/'
       weight: 6
       parent: blog
-    - name: 搜索
-      weight: 4
       params:
-        type: search
+        icon: pen-to-square   # 新增：图标（可选）
+    - name: 搜索
+      weight: 7               # 调整权重，避免和 GitHub 冲突
+      params:
+        type: search          # Hextra 搜索菜单标识（保留）
+        icon: search          # 新增：搜索图标
     - name: GitHub
-      weight: 5
+      weight: 8
       url: "https://github.com/frank6com"
       params:
-        icon: github
+        icon: github          # 保留 GitHub 图标
     - identifier: project
       name: 项目
-      weight: 6
+      weight: 9
       pageRef: '/project/'
+      params:
+        icon: folder-open     # 新增：图标（可选）
