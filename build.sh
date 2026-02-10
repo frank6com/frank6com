@@ -61,11 +61,29 @@ main() {
 
   # Install Hugo Theme
   echo "Installing Hugo Theme..."
-  git submodule add https://github.com/imfing/hextra.git themes/hextra
+  # 避免重复添加子模块导致报错
+  if [ ! -d "themes/hextra" ]; then
+    git submodule add https://github.com/imfing/hextra.git themes/hextra
+  fi
   
   # Build the site
   echo "Building the site..."
   hugo --gc --minify
+
+  # ========== 新增：查看构建产物 ==========
+  echo "=== 查看 Hugo 构建目录结构 ==="
+  # 打印 public 目录的完整路径
+  echo "Public 目录路径: $(pwd)/public"
+  # 列出 public 目录下的所有文件（递归）
+  ls -laR public/
+  # 检查是否存在 index.html（首页）
+  if [ -f "public/index.html" ]; then
+    echo "=== 首页 index.html 存在，前10行内容 ==="
+    head -10 public/index.html
+  else
+    echo "=== 错误：public 目录下没有 index.html ==="
+  fi
+  # =======================================
 
 }
 
