@@ -41,8 +41,6 @@ menu:
     - name: '首页'
       pageRef: '/'            # 对应根目录首页
       weight: 1
-      params:
-        icon: home            # 新增：Hextra 支持的图标（可选）
     - name: '关于'
       pageRef: '/about/'
       weight: 2
