@@ -46,35 +46,25 @@ menu:
     - name: '关于'
       pageRef: '/about/'
       weight: 2
-      params:
-        icon: user            # 新增：图标（可选）
     - identifier: blog
       name: '博客'
       pageRef: '/blog/'
       weight: 3
-      params:
-        icon: book-open            # 新增：图标（可选）
     - identifier: tech
       name: '技术分享'
       pageRef: '/blog/tech/'
       weight: 4
       parent: blog
-      params:
-        icon: code            # 新增：图标（可选）
     - identifier: game
       name: '游戏相关'
       pageRef: '/blog/game/'
       weight: 5
       parent: blog
-      params:
-        icon: puzzle         # 新增：图标（可选）
     - identifier: other
       name: '其他'
       pageRef: '/blog/other/'
       weight: 6
       parent: blog
-      params:
-        icon: pencil   # 新增：图标（可选）
     - name: 搜索
       weight: 7               # 调整权重，避免和 GitHub 冲突
       params:
@@ -89,5 +79,3 @@ menu:
       name: 项目
       weight: 9
       pageRef: '/project/'
-      params:
-        icon: folder-open     # 新增：图标（可选）
