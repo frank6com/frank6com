@@ -59,6 +59,10 @@ main() {
     git fetch --unshallow
   fi
 
+  # Install Hugo Theme
+  echo "Installing Hugo Theme..."
+  git submodule add https://github.com/imfing/hextra.git themes/hextra
+  
   # Build the site
   echo "Building the site..."
   hugo --gc --minify
