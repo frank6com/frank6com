@@ -18,7 +18,8 @@ params:
   # 站点基础配置
   title: 'Frank6 的意识流'
   description: '个人技术博客与生活分享'  # 站点描述（可选，优化 SEO）
-  author: 'Frank6'            # 作者名
+  author:
+    name: 'Frank6'            # 作者名
   home: 'home'                # 指定首页对应 content/home/_index.md（核心！）
   mainSections: ['blog']      # 主内容分区，对应 content/blog 目录
 
