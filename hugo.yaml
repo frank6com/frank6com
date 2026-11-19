@@ -30,6 +30,10 @@ params:
     showDarkMode: true        # 显示暗黑模式切换
     showSearch: true          # 显示搜索框（匹配你的搜索菜单）
 
+  # ICP 备案信息
+  filing:
+    icp: '鲁ICP备13002815号'
+
   # 页脚配置（可选，完善站点）
   footer:
     showCopyright: true
